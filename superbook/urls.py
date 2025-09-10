@@ -23,3 +23,8 @@ urlpatterns = [
     path('heroes/', include('heroes.urls')),
     path('posts/', include('posts.urls')),
 ]
+
+admin.site.site_header = "SuperBook Admin"
+admin.site.site_title = "SuperBook Painel"
+admin.site.index_title = "Bem-vindo ao SuperBook"
+

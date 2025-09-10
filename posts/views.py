@@ -3,13 +3,13 @@ from .models import Post
 from django.shortcuts import render, redirect
 from .forms import PostForm
 
-def lista_herois(request):
+def lista_posts(request):
     postagens = Post.objects.all()  # busca todos os heróis do banco
     return render(request, "posts/lista_posts.html", {"posts": postagens})
 
 class PostListView(ListView):
     model = Post
-    template_name = "posts/lista_herois.html"
+    template_name = "posts/lista_posts.html"
     context_object_name = "posts"
 
 def criar_post(request):
